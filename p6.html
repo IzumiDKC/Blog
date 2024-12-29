@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="post.js">
+
+    <title>Lớp và cách tiếp cận</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/image/android-chrome-192x192.png">
+</head>
+<style>
+    .highlight {
+        background-color: rgb(244, 244, 152);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    figure {
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    figcaption {
+        font-style: italic;
+        font-size: smaller;
+        color: purple;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 onclick="redirectTo()">Vũ Trụ Java/Js <span>Suy nghĩ về các bài học và ứng dụng thực tế</span></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Resources</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Classes and class-based approach (Lớp và cách tiếp cận dựa trên lớp)</h2>
+        <p>Tiếp đến khi hoàn thành khóa học <strong>Module Classes and class-based approach</strong>, tôi đã hiểu sâu
+            hơn về một trong những trụ cột của lập trình hướng đối tượng (OOP): khái niệm lớp (class). Module này đã
+            trang bị cho tôi kiến thức nền tảng về cách tổ chức code một cách có cấu trúc và tái sử dụng thông qua việc
+            sử dụng các lớp.</p>
+        <p>Trước đây, khi viết các chương trình đơn giản, tôi thường sử dụng cách tiếp cận lập trình tuyến tính (linear
+            programming), mọi thứ được viết tuần tự từ trên xuống dưới. Tuy nhiên, khi chương trình trở nên phức tạp
+            hơn, việc quản lý và bảo trì code trở nên khó khăn. Module này đã giới thiệu cho tôi một giải pháp hiệu quả
+            hơn: sử dụng lớp để nhóm các dữ liệu (thuộc tính - properties) và hành vi (phương thức - methods) liên quan
+            lại với nhau thành một đơn vị logic.</p>
+
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2024/08/PIC-444405.webp"
+                    alt="linear programming">
+                <figcaption>Người giao hàng tính toán các tuyến đường khác nhau đến tất cả sáu điểm đến và sau đó chọn
+                    tuyến đường ngắn nhất. Kỹ thuật chọn tuyến đường ngắn nhất này là lập trình tuyến tính.</figcaption>
+            </figure>
+        </div>
+
+        <p> Tôi đã được học cách định nghĩa một lớp, bao gồm việc khai báo các thuộc tính để lưu trữ dữ liệu và các
+            phương thức để thực hiện các hành động trên dữ liệu đó. Việc sử dụng từ khóa class (trong các ngôn ngữ như
+            Java, C++, JavaScript (ES6+)) giúp tôi dễ dàng tạo ra các khuôn mẫu cho các đối tượng. Sau đó, tôi có thể
+            tạo ra nhiều đối tượng (instances) từ lớp này, mỗi đối tượng có các giá trị thuộc tính riêng biệt nhưng chia
+            sẻ cùng một tập các phương thức.</p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://ngoaingucongnghe.edu.vn/upload/images/khoa-cong-nghe/kieukhaibaodulieu4.png"
+                    alt="khai báo dữ liệu">
+                <figcaption>Các kiểu khai báo dữ liệu cơ bản</figcaption>
+            </figure>
+        </div>
+        <p>Một trong những khái niệm quan trọng khác mà tôi đã học được là <a
+                href="https://codelearn.io/sharing/tinh-dong-goi-trong-oop"><strong>tính đóng gói
+                    (encapsulation)</strong></a>. Bằng cách sử dụng các từ khóa như <strong>private, protected,
+                public</strong> (tùy
+            thuộc vào ngôn ngữ lập trình), tôi có thể kiểm soát mức độ truy cập vào các thuộc tính và phương thức của
+            lớp. Điều này giúp bảo vệ dữ liệu khỏi bị truy cập và sửa đổi một cách không mong muốn từ bên ngoài, tăng
+            tính bảo mật và ổn định cho chương trình.</p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://mevn-public.s3-ap-southeast-1.amazonaws.com/marketenterprise.vn/wp-images/2020/07/08165457/Venn-Encapsulation-1.png"
+                    alt="tính đóng gói (encapsulation)">
+                <figcaption>
+                    <a href="https://www.marketenterprise.vn/blog/tinh-dong-goi-trong-lap-trinh-huong-doi-tuong.html">
+                        Tính đóng gói trong lập trình hướng đối tượng
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <P><strong>Kế thừa (inheritance)</strong> cũng là một khái niệm quan trọng được đề cập trong module này. Nó cho
+            phép tôi tạo ra các lớp mới dựa trên các lớp đã tồn tại, kế thừa các thuộc tính và phương thức của lớp cha
+            <strong>(superclass)</strong> và có thể mở rộng hoặc <strong>ghi đè (override)</strong> chúng để phù hợp với
+            nhu cầu cụ thể. Điều này giúp tôi
+            tránh việc viết code lặp đi lặp lại và tạo ra một hệ thống phân cấp các lớp rõ ràng, dễ quản lý
+        </P>
+
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://mevn-public.s3-ap-southeast-1.amazonaws.com/marketenterprise.vn/wp-images/2020/07/21113953/tinh-ke-thua-1-1024x618.png"
+                    alt="Tính kế thừa (inheritance)">
+                <figcaption>
+                    <a
+                        href="https://www.marketenterprise.vn/blog/tinh-ke-thua-inheritance-trong-lap-trinh-huong-doi-tuong.html">
+                        Tính kế thừa trong lập trình hướng đối tượng
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <p>
+            Cuối cùng, tôi đã được làm quen với khái niệm đa hình (polymorphism), cho phép các đối tượng thuộc các lớp
+            khác nhau phản ứng khác nhau với cùng một phương thức. Điều này mang lại sự linh hoạt cao trong việc xử lý
+            các đối tượng và giúp code trở nên tổng quát hơn.
+        </p>
+
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/TuanLQ7/tuanlq7/polymorphism.png"
+                    alt="Tính kế thừa (inheritance)">
+                <figcaption>
+                    <a href="https://codelearn.io/learning/lap-trinh-huong-doi-tuong-trong-cpp?tab=introduce">
+                        Biến thuộc lớp cha có thể tham chiếu tới đối tượng của các lớp con
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <p>
+            Thông qua module này, tôi đã hiểu rõ hơn về cách tiếp cận lập trình hướng đối tượng dựa trên lớp, một kỹ
+            thuật quan trọng giúp tôi viết code có cấu trúc tốt, dễ bảo trì và mở rộng. Tôi cảm thấy tự tin hơn trong
+            việc áp dụng các khái niệm này vào các dự án thực tế.
+        </p>
+    </main>
+
+    <div class="buttons">
+        <a href="p5.html" id="prevBtn" class="btn"> Bài trước</a>
+        <a href="p7.html" id="nextBtn" class="btn">Bài kế tiếp</a>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <h2>My Blog</h2>
+            <p>0398-272-171</p>
+            <p>dien.dev03@gmail.com</p>
+            <p>© 2025 bởi Điền Nguyễn. Powered and secured</p>
+        </div>
+        <div class="footer-right">
+            <section id="contact">
+                <h3>Liên hệ</h3>
+                <p>Hỏi tôi điều gì đó</p>
+                <form>
+                    <input type="text" placeholder="Họ *">
+                    <input type="text" placeholder="Tên *">
+                    <input type="email" placeholder="Email *">
+                    <textarea placeholder="Để lại cho tôi lời nhắn..."></textarea>
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function redirectTo() {
+        window.location.href = "index.html";
+    }
+</script>

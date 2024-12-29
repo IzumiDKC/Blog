@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="post.js">
+
+    <title>Đối tượng phi lớp</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/image/android-chrome-192x192.png">
+</head>
+<style>
+    .highlight {
+        background-color: rgb(244, 244, 152);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    figure {
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    figcaption {
+        font-style: italic;
+        font-size: smaller;
+        color: purple;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 onclick="redirectTo()">Vũ Trụ Java/Js <span>Suy nghĩ về các bài học và ứng dụng thực tế</span></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Resources</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Classless Objects (Đối tượng phi lớp)</h2>
+        <p> <strong>Classless Objects</strong> trong JSE2 đã mang đến cho tôi một góc nhìn mới mẻ về <a
+                href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_tr%C3%ACnh_h%C6%B0%E1%BB%9Bng_%C4%91%E1%BB%91i_t%C6%B0%E1%BB%A3ng#:~:text=L%E1%BA%ADp%20tr%C3%ACnh%20h%C6%B0%E1%BB%9Bng%20%C4%91%E1%BB%91i%20t%C6%B0%E1%BB%A3ng%20(ti%E1%BA%BFng%20Anh%3A%20Object%2Doriented,ch%E1%BB%A9c%20th%C3%A0nh%20c%C3%A1c%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c.">lập
+                trình hướng đối tượng</a>. Trước
+            đây, tôi thường quen với mô hình lập trình hướng đối tượng dựa trên lớp (class-based), nơi mà các đối tượng
+            được tạo ra từ các lớp như khuôn mẫu. Tuy nhiên, module này đã giới thiệu một cách tiếp cận khác, linh hoạt
+            hơn, đó là sử dụng đối tượng phi lớp (classless objects), hay còn gọi là prototype-based inheritance (kế
+            thừa dựa trên nguyên mẫu).</p>
+        <div style="text-align: center;">
+            <img src="https://www.netacad.com/content/jsa/1.0/courses/content/m1/en-US/assets/9ca63ceb05166e125d6028a7b38664b0a6497c3f.png"
+                alt="The Object.keys method">
+        </div>
+        <p>Một trong những điểm nổi bật của đối tượng phi lớp là tính động (dynamic) của chúng. Thay vì được định nghĩa
+            cứng nhắc bởi một lớp, các đối tượng có thể được tạo ra một cách trực tiếp và các thuộc tính (properties)
+            cũng như phương thức (methods) có thể được thêm hoặc sửa đổi bất cứ lúc nào trong quá trình chạy chương
+            trình. Điều này mang lại sự linh hoạt cao, đặc biệt trong các tình huống mà cấu trúc dữ liệu không được xác
+            định trước hoặc cần thay đổi thường xuyên.</p>
+
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://www.xul.fr/javascript/images/fruits.jpg" alt="dynamic">
+                <figcaption>Một đối tượng JavaScript được định nghĩa về mặt cú pháp là một hàm, bản thân nó là một "cá
+                    thể" đầu tiên và được sao chép để tạo ra nhiều "cá thể" hơn.</figcaption>
+            </figure>
+        </div>
+
+        <p> Khái niệm nguyên mẫu (prototype) là trung tâm của mô hình này. Mỗi đối tượng đều liên kết với một đối tượng
+            khác được gọi là nguyên mẫu của nó. Khi một thuộc tính hoặc phương thức được truy cập trên một đối tượng,
+            nếu nó không tồn tại trực tiếp trên đối tượng đó, trình thông dịch sẽ tìm kiếm nó trên nguyên mẫu của đối
+            tượng, và tiếp tục tìm kiếm trên nguyên mẫu của nguyên mẫu, cho đến khi tìm thấy hoặc đạt đến nguyên mẫu
+            cuối cùng (thường là null). Cơ chế này cho phép các đối tượng chia sẻ các thuộc tính và phương thức một cách
+            hiệu quả, tương tự như kế thừa trong mô hình dựa trên lớp, nhưng với cách tiếp cận linh hoạt hơn.</p>
+        <p>Tôi đã được thực hành tạo và thao tác với các đối tượng phi lớp, thêm và xóa thuộc tính, định nghĩa phương thức và thiết lập mối quan hệ nguyên mẫu giữa các đối tượng. Việc hiểu rõ cách hoạt động của prototype chain (chuỗi nguyên mẫu) là rất quan trọng để tránh các lỗi tiềm ẩn và tối ưu hiệu suất của chương trình. Ví dụ, việc thay đổi thuộc tính trên nguyên mẫu sẽ ảnh hưởng đến tất cả các đối tượng kế thừa từ nó, điều này có thể hữu ích trong một số trường hợp nhưng cũng cần được xử lý cẩn thận.</p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://www.codemancers.com/images/asynchronous_js/javascript_eventloop_gif.gif" alt="javascript eventloop">
+                <figcaption>Javascript Eventloop</figcaption>
+            </figure>
+        </div>
+<P>Module này cũng giúp tôi hiểu sâu hơn về cách JavaScript hoạt động, vì JavaScript là một ngôn ngữ prototype-based. Việc nắm vững khái niệm đối tượng phi lớp giúp tôi viết code JavaScript hiệu quả hơn và hiểu rõ hơn về các thư viện và framework JavaScript phổ biến. Tuy ban đầu có thể hơi khó làm quen với cách tiếp cận mới này, nhưng sau khi thực hành và hiểu rõ cơ chế, tôi nhận thấy nó mang lại nhiều lợi ích về tính linh hoạt và khả năng tùy biến.</P>
+    </main>
+
+    <div class="buttons">
+        <a href="p4.html" id="prevBtn" class="btn"> Bài trước</a>
+        <a href="p6.html" id="nextBtn" class="btn">Bài kế tiếp</a>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <h2>My Blog</h2>
+            <p>0398-272-171</p>
+            <p>dien.dev03@gmail.com</p>
+            <p>© 2025 bởi Điền Nguyễn. Powered and secured</p>
+        </div>
+        <div class="footer-right">
+            <section id="contact">
+                <h3>Liên hệ</h3>
+                <p>Hỏi tôi điều gì đó</p>
+                <form>
+                    <input type="text" placeholder="Họ *">
+                    <input type="text" placeholder="Tên *">
+                    <input type="email" placeholder="Email *">
+                    <textarea placeholder="Để lại cho tôi lời nhắn..."></textarea>
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function redirectTo() {
+        window.location.href = "index.html";
+    }
+</script>

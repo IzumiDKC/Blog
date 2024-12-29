@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="post.js">
+
+    <title>Các đối tượng dựng sẵn</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/image/android-chrome-192x192.png">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="redirectTo()">Vũ Trụ Java/Js <span>Suy nghĩ về các bài học và ứng dụng thực tế</span></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Resources</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Advanced function usage (Sử dụng hàm nâng cao)</h2>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://www.paulsblog.dev/content/images/size/w1000/2023/01/joan-gamell-ZS67i1HLllo-unsplash--1-.webp"
+                    alt="">
+                <figcaption>
+                    <a href="https://www.paulsblog.dev/advanced-javascript-functions-to-improve-code-quality/">
+                        Các hàm JavaScript nâng cao để cải thiện chất lượng mã
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <p><strong> Advanced function usage</strong> đã đưa tôi đến một cấp độ mới trong việc sử
+            dụng hàm, vượt ra ngoài những khái niệm cơ bản về định nghĩa và gọi hàm. Module này tập trung vào các kỹ
+            thuật và khái niệm nâng cao, giúp tôi viết code mạnh mẽ, linh hoạt và hiệu quả hơn.</p>
+
+        <p>Ví dụ: </p>
+        <p class="highlight">
+            Hàm <b>debounce</b> là phương pháp ngăn chặn một loạt sự kiện nhanh chóng kích hoạt lặp lại một hàm. Nó hoạt
+            động
+            bằng cách hoãn thực thi hàm cho đến khi một khoảng thời gian nhất định trôi qua mà không kích hoạt sự kiện
+        </p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="/image/once.png" alt="once">
+                <figcaption>
+                    <a href="https://www.paulsblog.dev/advanced-javascript-functions-to-improve-code-quality/#once">
+                        Cách triển khai hàm once trong JavaScript
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <blockquote>
+            <p>Trong đoạn mã JavaScript này, hàm <strong>debounce</strong> sẽ trả về một hàm mới thực thi hàm gốc sau
+                một hàm đã định nghĩa trước đó <b>delay</b> Nếu hàm được gọi lại, hàm <b>timeout</b> sẽ được đặt lại và
+                việc gọi hàm sẽ bị hoãn lại.</p>
+        </blockquote>
+        <p class="highlight">
+            Hàm <b>Once</b> là một phương thức sẽ ngăn chặn việc thực thi nếu đã được gọi. Điều này đặc biệt hữu ích khi
+            làm việc với trình lắng nghe sự kiện, nơi bạn thường gặp các hàm chỉ nên chạy một lần. Thay vì xóa trình
+            lắng nghe sự kiện mỗi lần, bạn có thể sử dụng hàm Once trong JavaScript.
+        </p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="/image/debounce.png" alt="debounce ">
+                <figcaption>
+                    <a href="https://www.paulsblog.dev/advanced-javascript-functions-to-improve-code-quality/#debounce">
+                        Cách triển khai hàm debounce trong JavaScript
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <blockquote>
+            <p>Hãy tưởng tượng, bạn có thể có một hàm gửi yêu cầu đến máy chủ để tải một số dữ liệu. Với hàm
+                <b>once()</b> này, bạn
+                có thể đảm bảo rằng yêu cầu không được gọi nhiều lần nếu người dùng tiếp tục nhấp vào nút. Điều này sẽ
+                tránh các vấn đề về hiệu suất.
+            </p>
+        </blockquote>
+        <blockquote>
+            <p>Nếu không có <b>once()</b> chức năng này, bạn sẽ xóa trình lắng nghe cú nhấp chuột ngay lập tức sau khi
+                yêu cầu
+                được gửi đi để tránh việc gửi lại yêu cầu.</p>
+        </blockquote>
+        <p class="highlight">
+            Ngoài ra còn có các hàm khác như <b>throttle, memoize, curry, partial ,...</b> Bạn có thể tìm hiểu thêm tại
+            <a
+                href="https://www.paulsblog.dev/advanced-javascript-functions-to-improve-code-quality/#introduction">đây</a>
+        </p>
+        <p>
+            Một trong những điểm nổi bật khác là Closure. Nó cho phép một hàm bên trong (inner function) truy cập vào
+            các biến của hàm bên ngoài (outer function) ngay cả sau khi hàm bên ngoài đã kết thúc. Điều này mở ra nhiều
+            khả năng trong việc tạo ra các hàm riêng tư (private functions) và duy trì trạng thái giữa các lần gọi hàm.
+        </p>
+        <p><b>Tại sao ảnh dưới đ6y lại hoạt động? </b>Làm sao có thể hoạt động <b>getPerson</b> để truy cập biến
+            <b>pet</b> ngay cả khi biến b>pet</b> không nằm trong nó?
+        </p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6pj21hxi6efty7t1ptfq.gif"
+                    alt=" ">
+                <figcaption>
+                    <a href="">
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <p class="highlight">
+            Trong bộ nhớ, chúng ta đặt một khoảng trống cho mỗi ngữ cảnh, trong trường hợp này là mặc định cho bất kỳ mã
+            nào, <b>ngữ cảnh toàn cục</b> và chúng ta cũng đặt
+            ngữ cảnh hàm <b>getPersonc</b> ( ngữ cảnh hàm cục bộ ). Mỗi ngữ cảnh có phạm vi riêng và hàm
+            <b>getPerson</b> có phạm vi
+            tương tự như vậy.
+        </p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8u1xeph0trj8xn1uiq1d.gif"
+                    alt=" ">
+                <figcaption>
+                    <a href="">
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <p>
+            Một khía cạnh khác là <b>recursion (đệ quy)</b>. Đệ quy là kỹ thuật một hàm tự gọi
+            chính nó. Mặc dù có thể hơi khó hiểu lúc ban đầu, nhưng khi nắm vững, đệ quy trở thành một công cụ mạnh mẽ
+            để giải quyết các bài toán có tính chất lặp lại và phân rã, ví dụ như duyệt cây, tính giai thừa, hoặc các
+            thuật toán tìm kiếm.
+        </p>
+        <div style="text-align: center;">
+            <figure>
+                <img src="https://techstuffssite.wordpress.com/wp-content/uploads/2016/04/top-5-programming-animated-gifs_recursion-animted-gif.gif"
+                    alt="">
+                <figcaption>
+                    <a href="https://techstuffssite.wordpress.com/2016/04/03/how-recursive-function-works/">
+                        Ví dụ thuật toán đệ quy
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <p>Thông qua <b>Advanced function usage</b>, tôi đã nâng cao kỹ năng sử dụng hàm của mình lên một tầm cao mới.
+            Tôi đã học được cách sử dụng các kỹ thuật mạnh mẽ như closure, higher-order functions, recursion, currying
+            và composition để viết code hiệu quả và linh hoạt hơn. Tôi cảm thấy tự tin hơn trong việc xử lý các bài toán
+            phức tạp và xây dựng các ứng dụng mạnh mẽ.</p>
+    </main>
+
+    <div class="buttons">
+        <a href="p7.html" id="prevBtn" class="btn"> Bài trước</a>
+        <a href="p9.html" id="nextBtn" class="btn">Bài kế tiếp</a>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <h2>My Blog</h2>
+            <p>0398-272-171</p>
+            <p>dien.dev03@gmail.com</p>
+            <p>© 2025 bởi Điền Nguyễn. Powered and secured</p>
+        </div>
+        <div class="footer-right">
+            <section id="contact">
+                <h3>Liên hệ</h3>
+                <p>Hỏi tôi điều gì đó</p>
+                <form>
+                    <input type="text" placeholder="Họ *">
+                    <input type="text" placeholder="Tên *">
+                    <input type="email" placeholder="Email *">
+                    <textarea placeholder="Để lại cho tôi lời nhắn..."></textarea>
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function redirectTo() {
+        window.location.href = "index.html";
+    }
+</script>

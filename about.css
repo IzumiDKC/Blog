@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #E94E1B;
+    margin: 0;
+}
+
+header h1 span {
+    font-size: 1rem;
+    display: block;
+    color: #555;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #E94E1B;
+}
+
+.content {
+    display: flex;
+    height: calc(100vh - 160px);
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-left {
+    background-color: #f2f2f2;
+}
+
+.box-left img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.box-right {
+    background-color: #ffe6e6;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box-right h1 {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #E94E1B;
+    margin-bottom: 10px;
+}
+
+.box-right h3 {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.box-right p {
+    font-family: "Coiny", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    color: #768CCE;
+    max-width: 600px;
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-left {
+    max-width: 40%;
+    margin: 120px;
+    text-align: center;
+}
+
+footer .footer-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer .footer-left p {
+    margin: 5px 0;
+}
+
+footer .footer-right {
+    max-width: 50%;
+}
+
+footer form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer form input,
+footer form textarea,
+footer form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer form button {
+    background-color: #E94E1B;
+    color: white;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background-color: #d13e17;
+}
+h1 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+h1:hover {
+    color: #007bff;
+}
+
+h1:hover::after {
+    content: '\2192';
+    position: absolute;
+    right: -10px;
+    top: 20%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
