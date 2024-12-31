@@ -21,6 +21,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100vh;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/008/617/161/non_2x/abstract-gradient-pastel-blue-and-purple-background-neon-pastel-color-template-for-website-or-presentation-free-free-vector.jpg');
+    background-size: cover;
 }
 
 header {

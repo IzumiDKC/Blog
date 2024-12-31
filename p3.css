@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/geometric-pattern-background-vector-white_53876-126684.jpg');
+    background-size: cover;
 }
 
 header {

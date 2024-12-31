@@ -14,8 +14,8 @@
 
 <body>
     <header>
-        <h1 onclick="redirectTo()">Vũ Trụ Java/Js <span>Suy nghĩ về các bài học và ứng dụng thực tế</span></h1>
-        <nav>
+        
+        <h1 onclick="redirectTo()">Vũ Trụ Java/Js <span id="running-text">Suy nghĩ về các bài học và ứng dụng thực tế</span></h1>        <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
@@ -46,7 +46,7 @@
             <img src="https://img-c.udemycdn.com/course/750x422/1468694_d595_2.jpg" alt="Post Thumbnail">
             <div class="recent-post-content">
                 <p class="post-meta">28 tháng 12, 2024 · 8 phút đọc</p>
-                <h4>Đánh giá và cảm nhận về 2 khóa học Javascript Essentials 1 & 2</h4>
+                <h4> <a href="p9.html" >Đánh giá và cảm nhận về 2 khóa học Javascript Essentials 1 & 2</a></h4>
                 <p>Việc hoàn thành cả hai khóa <strong>Javascript Essentials</strong> và <strong>Javascript Essentials
                     2</strong> đã trang bị cho tôi một nền tảng vững chắc về ngôn ngữ lập trình JavaScript, từ những khái
                 niệm cơ bản đến các kỹ thuật nâng cao...</p>
@@ -62,7 +62,7 @@
             <img src="https://www.paulsblog.dev/content/images/size/w1000/2023/01/joan-gamell-ZS67i1HLllo-unsplash--1-.webp" alt="Post Thumbnail">
             <div class="recent-post-content">
                 <p class="post-meta">27 tháng 12, 2024 · 7 phút đọc</p>
-                <h4>Sử dụng hàm nâng cao</h4>
+                <h4> <a href="p8.html">Sử dụng hàm nâng cao</a></h4>
                 <p><strong> Advanced function usage</strong> đã đưa tôi đến một cấp độ mới trong việc sử
             dụng hàm, vượt ra ngoài những khái niệm cơ bản về định nghĩa và gọi hàm...</p>
                 <div class="post-footer">
@@ -77,7 +77,7 @@
             <img src="https://scaler.com/topics/images/introduction-to-built-in-objects-in-javascript.webp" alt="Post Thumbnail">
             <div class="recent-post-content">
                 <p class="post-meta">26 tháng 12, 2024 · 6 phút đọc</p>
-                <h4>Các đối tượng dựng sẵn</h4>
+                <h4> <a href="p7.html">Các đối tượng dựng sẵn</a></h4>
                 <p>Module về <strong>Built-in objects</strong> đã cung cấp cho tôi một cái nhìn tổng quan về các đối tượng được tích hợp sẵn
                     trong ngôn ngữ lập trình (ví dụ: JavaScript, Java, Python,... tùy vào ngữ cảnh bạn đang học). Thay vì phải
                     ...</p>
@@ -164,5 +164,18 @@
   button.addEventListener('click', function() {
     window.location.href = 'resources.html'; 
   });
+
+  const navLinks = document.querySelectorAll('nav a');
+const submenus = document.querySelectorAll('.submenu');
+
+navLinks.forEach((link, index) => {
+  link.addEventListener('mouseover', () => {
+    submenus[index].style.display = 'block';
+  });
+  link.addEventListener('mouseout', () => {
+    submenus[index].style.display = 'none';
+  });
+});
+
 
 </script>

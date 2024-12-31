@@ -5,6 +5,9 @@
           height: 100%;
           display: flex;
           flex-direction: column;
+          height: 100vh;
+          background-image: url('https://static.vecteezy.com/system/resources/previews/008/617/161/non_2x/abstract-gradient-pastel-blue-and-purple-background-neon-pastel-color-template-for-website-or-presentation-free-free-vector.jpg');
+          background-size: cover;
       }
 
       .grid-container {
@@ -87,8 +90,11 @@
       }
 
       nav a:hover {
-          color: #E94E1B;
+          color: blue;
       }
+
+
+
 
       .container {
           display: flex;
@@ -224,7 +230,7 @@
           .left-section,
           .right-section {
               max-width: 100%;
-              padding: 0;          
+              padding: 0;
           }
 
           .right-section {
@@ -235,6 +241,7 @@
               flex-direction: column;
               align-items: center;
           }
+
           footer .footer-right {
               max-width: 100%;
               text-align: center;
